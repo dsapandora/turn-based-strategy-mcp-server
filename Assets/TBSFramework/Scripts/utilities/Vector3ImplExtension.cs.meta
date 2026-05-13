@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: bd4140adfe5cf704e9dc21e1c5b4cf53
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Scripts/utilities/Vector3ImplExtension.cs
+  uploadId: 874300

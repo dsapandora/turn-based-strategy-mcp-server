@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2bac6317618b00840a2e8edbaed46703
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Assets/Fonts/Montserrat/static/Montserrat-ExtraBold
+    SDF.asset
+  uploadId: 874300

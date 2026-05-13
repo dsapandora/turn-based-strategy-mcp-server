@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 59782ca8f190e724885b27d527768e72
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Prefabs/units/wizard.prefab
+  uploadId: 874300

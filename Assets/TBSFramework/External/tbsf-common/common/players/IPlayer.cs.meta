@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4393ffb42a8f8f34a9bbfc0f7640686b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/External/tbsf-common/common/players/IPlayer.cs
+  uploadId: 874300

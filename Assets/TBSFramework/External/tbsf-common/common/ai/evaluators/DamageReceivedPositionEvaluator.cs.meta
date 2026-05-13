@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4e8270386d63eeb46bf1746d5b0f61b5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/External/tbsf-common/common/ai/evaluators/DamageReceivedPositionEvaluator.cs
+  uploadId: 874300

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6b0fc9f4ed9ff5645912d2098c8b1016
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Prefabs/units/clashOfHeroesUnit.prefab
+  uploadId: 874300

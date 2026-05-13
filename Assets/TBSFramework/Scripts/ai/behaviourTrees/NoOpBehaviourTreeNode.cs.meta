@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: fd2777700fe8ddf4e833a5b274104cd6
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Scripts/ai/behaviourTrees/NoOpBehaviourTreeNode.cs
+  uploadId: 874300

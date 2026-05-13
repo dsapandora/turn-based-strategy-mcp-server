@@ -1,0 +1,76 @@
+﻿using System.Collections.Generic;
+using TurnBasedStrategyFramework.Common.Cells;
+using TurnBasedStrategyFramework.Common.Pathfinding.DataStructures;
+
+namespace TurnBasedStrategyFramework.Common.Pathfinding.Algorithms
+{
+    /// <summary>
+    /// Implementation of Dijkstra pathfinding algorithm.
+    /// </summary>
+    public class DijkstraPathfinding : PathfindingAlgorithm
+    {
+        public override List<ICell> FindPath(Dictionary<ICell, Dictionary<ICell, float>> edges, ICell originNode, ICell destinationNode)
+        {
+            IPriorityQueue<ICell> frontier = new HeapPriorityQueue<ICell>(edges.Count);
+            frontier.Enqueue(originNode, 0);
+
+            Dictionary<ICell, ICell> cameFrom = new Dictionary<ICell, ICell>(edges.Count);
+            cameFrom.Add(originNode, default);
+            Dictionary<ICell, float> costSoFar = new Dictionary<ICell, float>(edges.Count);
+            costSoFar.Add(originNode, 0);
+
+            while (frontier.Count != 0)
+            {
+                var current = frontier.Dequeue();
+                var neighbours = GetNeighbours(edges, current);
+                var currentCost = costSoFar[current];
+                var currentEdges = edges[current];
+
+                foreach (var neighbour in neighbours)
+                {
+                    var newCost = currentCost + currentEdges[neighbour];
+                    if (!costSoFar.TryGetValue(neighbour, out var neighbourCost) || newCost < neighbourCost)
+                    {
+                        costSoFar[neighbour] = newCost;
+                        cameFrom[neighbour] = current;
+                        frontier.Enqueue(neighbour, newCost);
+                    }
+                }
+                if (current.Equals(destinationNode)) break;
+            }
+            return ReconstructPath(originNode, destinationNode, cameFrom, new List<ICell>());
+        }
+
+        public override (Dictionary<ICell, ICell> cameFrom, Dictionary<ICell, float> costSoFar) FindAllPaths(Dictionary<ICell, Dictionary<ICell, float>> edges, ICell originNode)
+        {
+            IPriorityQueue<ICell> frontier = new HeapPriorityQueue<ICell>(edges.Count);
+            frontier.Enqueue(originNode, 0);
+
+            Dictionary<ICell, ICell> cameFrom = new Dictionary<ICell, ICell>(edges.Count);
+            cameFrom.Add(originNode, default);
+            Dictionary<ICell, float> costSoFar = new Dictionary<ICell, float>(edges.Count);
+            costSoFar.Add(originNode, 0);
+
+            while (frontier.Count != 0)
+            {
+                var current = frontier.Dequeue();
+                var neighbours = GetNeighbours(edges, current);
+                var currentCost = costSoFar[current];
+                var currentEdges = edges[current];
+
+                foreach (var neighbour in neighbours)
+                {
+                    var newCost = currentCost + currentEdges[neighbour];
+                    if (!costSoFar.TryGetValue(neighbour, out var neighbourCost) || newCost < neighbourCost)
+                    {
+                        costSoFar[neighbour] = newCost;
+                        cameFrom[neighbour] = current;
+                        frontier.Enqueue(neighbour, newCost);
+                    }
+                }
+            }
+
+            return (cameFrom, costSoFar);
+        }
+    }
+}

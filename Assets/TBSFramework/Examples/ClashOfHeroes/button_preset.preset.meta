@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a08caa53447fc2f4b82e8327cc8adbbf
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2655988077585873504
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/button_preset.preset
+  uploadId: 874300

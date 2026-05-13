@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 545b2e24836194047a85b28dd802d026
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Scripts/ai/behaviourTrees/customNodes/UnitCounterNode.cs
+  uploadId: 874300

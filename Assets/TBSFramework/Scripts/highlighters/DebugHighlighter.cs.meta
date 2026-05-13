@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 451f996b4bbac874a8c7b6b52537e0a2
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Scripts/highlighters/DebugHighlighter.cs
+  uploadId: 874300

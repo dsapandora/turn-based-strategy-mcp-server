@@ -1,0 +1,335 @@
+{
+  "viewport": {
+    "x": -68,
+    "y": 579.5090909090909,
+    "zoom": 0.7636363636363636
+  },
+  "name": "TBS MCP",
+  "description": "Agent with MCP tools from Unity. RAG with Qdrant stores game context for memory. Rocket Ride mcp_client connects to Unity MCP server.",
+  "components": [
+    {
+      "id": "webhook_1",
+      "provider": "webhook",
+      "config": {
+        "hideForm": true,
+        "mode": "Source",
+        "parameters": {
+          "endpoint": "/webhook",
+          "host": "0.0.0.0",
+          "port": 5565
+        },
+        "type": "webhook",
+        "key": "webhook://*",
+        "include": [
+          {
+            "path": "*"
+          }
+        ]
+      },
+      "ui": {
+        "position": {
+          "x": -480,
+          "y": -360
+        },
+        "measured": {
+          "width": 160,
+          "height": 135
+        },
+        "data": {
+          "provider": "webhook",
+          "class": [
+            "source"
+          ],
+          "type": "default",
+          "content": ""
+        },
+        "formDataValid": true
+      }
+    },
+    {
+      "id": "parse_1",
+      "provider": "parse",
+      "config": {},
+      "ui": {
+        "position": {
+          "x": -260,
+          "y": -380
+        },
+        "measured": {
+          "width": 160,
+          "height": 135
+        },
+        "data": {
+          "provider": "parse",
+          "class": [
+            "data"
+          ],
+          "type": "default",
+          "content": ""
+        },
+        "formDataValid": true
+      },
+      "input": [
+        {
+          "lane": "tags",
+          "from": "webhook_1"
+        }
+      ]
+    },
+    {
+      "id": "agent_rocketride_1",
+      "provider": "agent_rocketride",
+      "config": {
+        "instructions": [],
+        "profile": "default",
+        "default": {
+          "instructions": [
+            "You are a tactical agent for a turn-based grid strategy game. You may receive retrieved tactical manual excerpts (RAG): use them to inform your decisions.",
+            "FAST flow: Call get_world_state at turn start. Move/attack responses include strategic_summary (POST_ACTION_STATE)—use it for the next decision. Execute up to 2–3 move/attack actions in sequence before calling get_world_state again. Only call get_world_state when you need fresh options (e.g. after 2–3 actions or when uncertain). The response includes PREVIOUS TURN and ACTIONS SO FAR THIS TURN.",
+            "Your roster is Knight, Rogue, Wizard. Check ENEMIES' types and abilities. To attack, unit must be in range; if 'Can attack' is empty, move first.",
+            "Act with EVERY unit. Each unit gets one move and one attack. Use PREVIOUS TURN to avoid repeating mistakes. CRITICAL: When all units have acted (check ACTIONS SO FAR), you MUST call end_turn—otherwise the turn never ends and the enemy never moves. If a tool returns error, do not retry."
+          ]
+        }
+      },
+      "ui": {
+        "position": {
+          "x": 520,
+          "y": -340
+        },
+        "measured": {
+          "width": 160,
+          "height": 94
+        },
+        "data": {
+          "provider": "agent_rocketride",
+          "class": [
+            "agent",
+            "tool"
+          ],
+          "type": "default",
+          "content": ""
+        },
+        "formDataValid": true
+      },
+      "input": [
+        {
+          "lane": "questions",
+          "from": "webhook_1"
+        },
+        {
+          "lane": "questions",
+          "from": "embedding_q_1"
+        }
+      ]
+    },
+    {
+      "id": "embedding_q_1",
+      "provider": "embedding_transformer",
+      "config": {
+        "profile": "miniLM"
+      },
+      "ui": {
+        "position": {
+          "x": 200,
+          "y": -400
+        },
+        "measured": {
+          "width": 160,
+          "height": 83
+        },
+        "data": {
+          "provider": "embedding_transformer",
+          "class": [
+            "embedding"
+          ],
+          "type": "default",
+          "content": ""
+        },
+        "formDataValid": true
+      },
+      "input": [
+        {
+          "lane": "questions",
+          "from": "question_1"
+        }
+      ]
+    },
+    {
+      "id": "mcp_client_1",
+      "provider": "mcp_client",
+      "config": {
+        "serverName": "mcp",
+        "transport": "streamable-http",
+        "type": "mcp_client",
+        "profile": "streamable_http",
+        "streamable_http": {
+          "serverName": "tbs",
+          "transport": "streamable-http",
+          "endpoint": "http://localhost:8765/mcp"
+        }
+      },
+      "ui": {
+        "position": {
+          "x": 300,
+          "y": -140
+        },
+        "measured": {
+          "width": 160,
+          "height": 77
+        },
+        "data": {
+          "provider": "mcp_client",
+          "class": [
+            "tool"
+          ],
+          "type": "default",
+          "content": ""
+        },
+        "formDataValid": true
+      },
+      "control": [
+        {
+          "classType": "tool",
+          "from": "agent_rocketride_1"
+        }
+      ]
+    },
+    {
+      "id": "memory_internal_1",
+      "provider": "memory_internal",
+      "config": {
+        "type": "memory_internal"
+      },
+      "ui": {
+        "position": {
+          "x": 500,
+          "y": -120
+        },
+        "measured": {
+          "width": 160,
+          "height": 47
+        },
+        "data": {
+          "provider": "memory_internal",
+          "class": [
+            "tool"
+          ],
+          "type": "default",
+          "content": ""
+        },
+        "formDataValid": true
+      },
+      "control": [
+        {
+          "classType": "tool",
+          "from": "agent_rocketride_1"
+        }
+      ]
+    },
+    {
+      "id": "llm_anthropic_1",
+      "provider": "llm_anthropic",
+      "config": {
+        "profile": "claude-haiku-4-5",
+        "claude-sonnet-4-6": {},
+        "claude-sonnet-4-5": {
+          "apikey": "${ROCKETRIDE_ANTHROPIC_APIKEY}"
+        },
+        "parameters": {
+          "google": {}
+        },
+        "claude-haiku-4-5": {
+          "apikey": "${ROCKETRIDE_ANTHROPIC_APIKEY}"
+        }
+      },
+      "ui": {
+        "position": {
+          "x": 700,
+          "y": -200
+        },
+        "measured": {
+          "width": 160,
+          "height": 94
+        },
+        "data": {
+          "provider": "llm_anthropic",
+          "class": [
+            "llm"
+          ],
+          "type": "default",
+          "content": ""
+        },
+        "formDataValid": true
+      },
+      "control": [
+        {
+          "classType": "llm",
+          "from": "agent_rocketride_1"
+        }
+      ]
+    },
+    {
+      "id": "response_answers_1",
+      "provider": "response_answers",
+      "config": {
+        "laneName": "answers"
+      },
+      "ui": {
+        "position": {
+          "x": 760,
+          "y": -340
+        },
+        "measured": {
+          "width": 160,
+          "height": 65
+        },
+        "data": {
+          "provider": "response_answers",
+          "class": [
+            "infrastructure"
+          ],
+          "type": "default",
+          "content": ""
+        },
+        "formDataValid": true
+      },
+      "input": [
+        {
+          "lane": "answers",
+          "from": "agent_rocketride_1"
+        }
+      ]
+    },
+    {
+      "id": "question_1",
+      "provider": "question",
+      "config": {
+        "profile": "default",
+        "default": {}
+      },
+      "ui": {
+        "position": {
+          "x": -40,
+          "y": -380
+        },
+        "measured": {
+          "width": 160,
+          "height": 65
+        },
+        "data": {
+          "provider": "question",
+          "class": "text",
+          "type": "default"
+        },
+        "formDataValid": true
+      },
+      "input": [
+        {
+          "lane": "text",
+          "from": "parse_1"
+        }
+      ]
+    }
+  ],
+  "project_id": "c56a24c3-04ea-4c9f-bf99-fc9a6565089a"
+}

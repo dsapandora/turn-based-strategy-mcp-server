@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: b6d94c7b874694b4eb01091169011fb5
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Scripts/highlighters/SetSpriteOrderHighlighter.cs
+  uploadId: 874300

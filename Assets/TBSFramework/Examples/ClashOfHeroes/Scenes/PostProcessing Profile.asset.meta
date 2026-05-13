@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5e9b8f0b25478434492831b427f35360
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Scenes/PostProcessing Profile.asset
+  uploadId: 874300

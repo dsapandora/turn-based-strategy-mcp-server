@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b9774f78a4d870242b888e2eada515b8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4890085278179872738
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Assets/Sprites/ui/kenney_game-icons/PNG/White/2x/New
+    Lighting Settings.lighting
+  uploadId: 874300

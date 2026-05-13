@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4393bfb25c3d1e3499ac85ed32699383
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Assets/Models/KayKitMedievalHexagon/License.txt
+  uploadId: 874300

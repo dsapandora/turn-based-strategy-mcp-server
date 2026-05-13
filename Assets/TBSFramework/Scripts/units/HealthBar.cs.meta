@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 5329345fd0d2a8c4283e8cde88805402
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Scripts/units/HealthBar.cs
+  uploadId: 874300

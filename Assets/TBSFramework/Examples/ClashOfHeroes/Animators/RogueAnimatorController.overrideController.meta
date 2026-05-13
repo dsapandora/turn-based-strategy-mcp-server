@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f77c3562b7524e94d8dc3e5e8b8edc64
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 22100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Animators/RogueAnimatorController.overrideController
+  uploadId: 874300

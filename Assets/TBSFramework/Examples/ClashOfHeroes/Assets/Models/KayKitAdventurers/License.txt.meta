@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 38868f0f773facc49a81db4eb07d702c
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Assets/Models/KayKitAdventurers/License.txt
+  uploadId: 874300

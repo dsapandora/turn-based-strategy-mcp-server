@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: f567e388dc982dd40b021b74e5e8c11c
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Scripts/highlighters/ArrowSpritePathHighlighter.cs
+  uploadId: 874300

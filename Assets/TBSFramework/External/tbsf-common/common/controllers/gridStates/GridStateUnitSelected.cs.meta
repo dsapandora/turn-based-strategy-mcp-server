@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 7081b8f022cc3b04a94c6b84034e82ff
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/External/tbsf-common/common/controllers/gridStates/GridStateUnitSelected.cs
+  uploadId: 874300

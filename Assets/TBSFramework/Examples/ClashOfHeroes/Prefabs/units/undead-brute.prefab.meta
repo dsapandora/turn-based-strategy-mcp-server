@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 45791f040349a17449018f11d6b747f9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Prefabs/units/undead-brute.prefab
+  uploadId: 874300

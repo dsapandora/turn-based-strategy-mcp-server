@@ -1,0 +1,79 @@
+{
+  "viewport": {
+    "x": 30.609122042341255,
+    "y": 219.29296388542969,
+    "zoom": 0.62079701120797
+  },
+  "name": "TBS Decisions",
+  "description": "Webhook-driven world-state to action decisions with Qdrant memory and Anthropic.",
+  "components": [
+    {
+      "id": "webhook_1",
+      "provider": "webhook",
+      "config": {
+        "hideForm": true,
+        "mode": "Source",
+        "parameters": {},
+        "type": "webhook"
+      },
+      "ui": {
+        "position": {"x": -20, "y": 120},
+        "measured": {"width": 160, "height": 135},
+        "data": {"provider": "webhook", "class": "source", "type": "default"},
+        "formDataValid": true
+      }
+    },
+    {
+      "id": "parse_1",
+      "provider": "parse",
+      "config": {},
+      "ui": {"position": {"x": 330, "y": 120}, "measured": {"width": 160, "height": 135}, "data": {"provider": "parse", "class": "data", "type": "default"}, "formDataValid": true},
+      "input": [{"lane": "tags", "from": "webhook_1"}]
+    },
+    {
+      "id": "preprocessor_1",
+      "provider": "preprocessor_langchain",
+      "config": {"profile": "default", "default": {"mode": "strlen", "splitter": "RecursiveCharacterTextSplitter", "strlen": 2048}},
+      "ui": {"position": {"x": 560, "y": 120}, "measured": {"width": 160, "height": 83}, "data": {"provider": "preprocessor_langchain", "class": "preprocessor", "type": "default"}, "formDataValid": true},
+      "input": [{"lane": "text", "from": "parse_1"}, {"lane": "table", "from": "parse_1"}]
+    },
+    {
+      "id": "embedding_transformer_1",
+      "provider": "embedding_transformer",
+      "config": {"profile": "miniLM"},
+      "ui": {"position": {"x": 760, "y": 200}, "measured": {"width": 160, "height": 83}, "data": {"provider": "embedding_transformer", "class": "embedding", "type": "default"}, "formDataValid": true},
+      "input": [{"lane": "documents", "from": "preprocessor_1"}, {"lane": "questions", "from": "preprocessor_1"}]
+    },
+    {
+      "id": "qdrant_1",
+      "provider": "qdrant",
+      "config": {"profile": "local", "cloud": {"collection": "clash_of_heroes_memory", "port": 6333, "score": 0.7}, "local": {"collection": "clash_of_heroes_memory", "host": "localhost", "port": 6333, "score": 0.7}, "parameters": {}},
+      "ui": {"position": {"x": 920, "y": 320}, "measured": {"width": 160, "height": 100}, "data": {"provider": "qdrant", "class": "store", "type": "default"}, "formDataValid": true},
+      "input": [{"lane": "documents", "from": "embedding_transformer_1"}, {"lane": "questions", "from": "embedding_transformer_1"}]
+    },
+    {
+      "id": "llm_anthropic_1",
+      "provider": "llm_anthropic",
+      "config": {
+        "profile": "claude-sonnet-4-5",
+        "claude-sonnet-4-6": {},
+        "claude-sonnet-4-5": {"apikey": "{{ANTHROPIC_API_KEY}}"},
+        "parameters": {
+          "system_prompt": "You are a tactical agent for a turn-based grid strategy game. Input includes world state, playable_unit_ids, per-unit options, and retrieved memory. Select exactly one unit from playable_unit_ids and return ONLY JSON with this schema: {\"actor_id\": <selected_unit_id>, \"actions\": [{\"type\":\"move\",\"target_x\":int,\"target_y\":int},{\"type\":\"attack\",\"target_unit_id\":int},{\"type\":\"end_turn\"},{\"type\":\"noop\"}]}. No prose. Keep actions legal for the selected unit. Max 3 actions in the actions array.",
+          "response_format": "json",
+          "google": {}
+        }
+      },
+      "ui": {"position": {"x": 1160, "y": 260}, "measured": {"width": 160, "height": 65}, "data": {"provider": "llm_anthropic", "class": "llm", "type": "default"}, "formDataValid": true},
+      "input": [{"lane": "questions", "from": "qdrant_1"}]
+    },
+    {
+      "id": "response_answers_1",
+      "provider": "response_answers",
+      "config": {"laneName": "answers"},
+      "ui": {"position": {"x": 1420, "y": 400}, "measured": {"width": 160, "height": 65}, "data": {"provider": "response_answers", "class": "infrastructure", "type": "default"}, "formDataValid": true},
+      "input": [{"lane": "answers", "from": "llm_anthropic_1"}]
+    }
+  ],
+  "project_id": "860e199f-49fe-47a1-83ef-560be0d42d80"
+}

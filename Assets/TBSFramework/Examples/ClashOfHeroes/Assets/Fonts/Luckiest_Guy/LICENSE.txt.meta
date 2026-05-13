@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 27e34f1a82448a14bb2e62bdf1264d27
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Assets/Fonts/Luckiest_Guy/LICENSE.txt
+  uploadId: 874300

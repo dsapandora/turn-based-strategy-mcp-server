@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 77d38532fa977e049a3e2e8bb61d4e0b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2655988077585873504
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Assets/Sprites/ui/kenney-fantasy-ui/PNG/sprite_settings_alternative.preset
+  uploadId: 874300

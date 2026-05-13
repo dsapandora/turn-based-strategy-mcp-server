@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d706021a9bb162441b5db65cef2566a6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Materials/BarbarianMaterial.mat
+  uploadId: 874300

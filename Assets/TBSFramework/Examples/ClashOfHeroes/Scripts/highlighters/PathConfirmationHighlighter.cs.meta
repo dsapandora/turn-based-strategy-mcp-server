@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 88d1c3c161fa3814db54a3153526e49e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Scripts/highlighters/PathConfirmationHighlighter.cs
+  uploadId: 874300

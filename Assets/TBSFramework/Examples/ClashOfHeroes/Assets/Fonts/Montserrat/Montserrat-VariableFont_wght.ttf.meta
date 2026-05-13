@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: e658efdf74d83fa4bbf01ac09fe4f3d1
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Montserrat
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 9537e3335dda9414ebd762170c049a40, type: 3}
+  - {fileID: 12800000, guid: 6373205282a91e344955c9400574ec6d, type: 3}
+  - {fileID: 12800000, guid: d44456afb45b80d46a0a99014f636439, type: 3}
+  - {fileID: 12800000, guid: 3490ca5ae64429b4781006c0ca88782f, type: 3}
+  - {fileID: 12800000, guid: 635da8de90c81d84b950dbc6b3b9938a, type: 3}
+  - {fileID: 12800000, guid: a01953dd0fb713245bd7660a4df624e0, type: 3}
+  - {fileID: 12800000, guid: 705d7fbfa60cee34ea36e5ec345e8e1b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Assets/Fonts/Montserrat/Montserrat-VariableFont_wght.ttf
+  uploadId: 874300

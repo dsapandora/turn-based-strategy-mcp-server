@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e5b7f47a0dfa46f48a7bd0ad8878287a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Animators/TitleAnimator.controller
+  uploadId: 874300

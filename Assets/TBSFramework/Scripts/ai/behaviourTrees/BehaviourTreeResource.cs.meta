@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f6d49abd88bcee649b0f73fab5a2eea8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Scripts/ai/behaviourTrees/BehaviourTreeResource.cs
+  uploadId: 874300

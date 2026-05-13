@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 5db3c28f913548d4ea9a89c6140f5e73
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/External/tbsf-common/common/units/abilities/EndTurnCommand.cs
+  uploadId: 874300

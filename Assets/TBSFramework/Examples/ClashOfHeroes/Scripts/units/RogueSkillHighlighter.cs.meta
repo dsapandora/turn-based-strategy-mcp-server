@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 0dae5e6eaf358334d8aede6b6023e08c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Scripts/units/RogueSkillHighlighter.cs
+  uploadId: 874300
