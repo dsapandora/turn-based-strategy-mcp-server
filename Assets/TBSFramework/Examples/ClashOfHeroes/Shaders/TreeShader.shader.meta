@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: e49012b5dae398f488028ee50718b4b8
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Shaders/TreeShader.shader
+  uploadId: 874300

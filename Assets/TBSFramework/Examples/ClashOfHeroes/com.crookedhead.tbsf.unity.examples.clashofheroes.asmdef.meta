@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b3418b86070a0f64a829388475a4c986
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/com.crookedhead.tbsf.unity.examples.clashofheroes.asmdef
+  uploadId: 874300

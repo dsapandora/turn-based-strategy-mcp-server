@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 06092d90d93b7a14cae2f7d2f73d536b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Assets/Fonts/Luckiest_Guy/LuckiestGuy-Regular
+    SDF.asset
+  uploadId: 874300

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cee099232c19f964e97b12b673856918
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Assets/Fonts/Montserrat/OFL.txt
+  uploadId: 874300

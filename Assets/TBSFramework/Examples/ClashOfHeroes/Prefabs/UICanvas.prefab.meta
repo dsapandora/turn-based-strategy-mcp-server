@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5f86d9b3f1cdfea4783b0f600b6aaab1
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Prefabs/UICanvas.prefab
+  uploadId: 874300

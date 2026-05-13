@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6222bbc9b714dbb4abae3e33adf0b994
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Assets/Models/KayKitSkeletons/License.txt
+  uploadId: 874300

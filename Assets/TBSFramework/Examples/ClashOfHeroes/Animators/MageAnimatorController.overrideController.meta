@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f45a98130f0b2024e88d2fcc1b6d9f89
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 22100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Animators/MageAnimatorController.overrideController
+  uploadId: 874300

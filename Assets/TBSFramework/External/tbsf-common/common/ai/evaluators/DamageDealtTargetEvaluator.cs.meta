@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b8dfb78ac6f5e8845a76ceaa1db8be2b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/External/tbsf-common/common/ai/evaluators/DamageDealtTargetEvaluator.cs
+  uploadId: 874300

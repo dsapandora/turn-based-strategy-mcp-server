@@ -1,0 +1,17 @@
+{
+    "name": "com.crookedhead.tbsf.unity",
+    "rootNamespace": "",
+    "references": [
+        "GUID:73e792cf0fd01b3438c14a3a994dd2ce",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

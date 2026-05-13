@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8e5f5973a72afde4aa4dd933a1aafdc1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Scripts/units/abilities/Ability.cs
+  uploadId: 874300

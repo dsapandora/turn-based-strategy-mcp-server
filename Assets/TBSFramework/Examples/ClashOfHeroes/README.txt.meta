@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5877cec06c681b347ac20083478c413e
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/README.txt
+  uploadId: 874300

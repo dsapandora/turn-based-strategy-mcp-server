@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f822eb4b5a1859e4aa7ef3df3ba41d7d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Scripts/highlighters/CurveMovementHighlighter.cs
+  uploadId: 874300

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 91cbaa84fc5034a4d96dba12dba091d2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 22100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Animators/ArcherAnimatorController.overrideController
+  uploadId: 874300

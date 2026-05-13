@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9340e039bc32e524b99e985d80db51c5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Assets/Fonts/Montserrat/Montserrat-VariableFont_wght
+    SDF.asset
+  uploadId: 874300

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 776ca62fbf8b2cf4a90a5ae5ee41dde2
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Assets/Sprites/ui/kenney_game-icons/license.txt
+  uploadId: 874300

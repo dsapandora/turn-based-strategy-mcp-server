@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4b4a3a65397b69d48804ba653c01026c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Prefabs/units/undead-archer.prefab
+  uploadId: 874300

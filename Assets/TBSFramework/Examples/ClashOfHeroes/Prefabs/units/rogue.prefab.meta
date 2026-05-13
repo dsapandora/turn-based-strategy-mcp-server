@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1b0b372704b15d24d9d9957470655782
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Prefabs/units/rogue.prefab
+  uploadId: 874300

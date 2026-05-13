@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 1512fe94b94689e4c9c7dec9101057af
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Scripts/highlighters/GameObjectsActivatorHighlighter.cs
+  uploadId: 874300

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 32ca0e74cdfcb51458642f70f4b8bd9e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/External/tbsf-common/common/ai/evaluators/DistancePositionEvaluator.cs
+  uploadId: 874300

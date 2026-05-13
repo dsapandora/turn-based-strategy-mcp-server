@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 91dd6cc7b0407c34ba6cd723c206276b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Scripts/controllers/turnResolvers/SubsequentTurnResolver.cs
+  uploadId: 874300

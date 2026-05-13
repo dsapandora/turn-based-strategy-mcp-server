@@ -1,0 +1,21 @@
+{
+    "name": "com.crookedhead.tbsf.unity.editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:73e792cf0fd01b3438c14a3a994dd2ce",
+        "GUID:ba1d260f9e69eb6409c598826f52f7b9",
+        "GUID:3a9781db4804a9945b9883f3a7c46d45",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

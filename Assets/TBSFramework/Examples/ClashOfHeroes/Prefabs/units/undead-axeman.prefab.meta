@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 721f888b5b19adb4580400f72be19ad1
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 50282
+  packageName: Turn Based Strategy Framework
+  packageVersion: 4.2.0
+  assetPath: Assets/TBSFramework/Examples/ClashOfHeroes/Prefabs/units/undead-axeman.prefab
+  uploadId: 874300
