@@ -29,9 +29,6 @@ Unity tactical-battle sample that shows **Unity MCP** talking to a **RocketRide*
 
 **Author:** Ariel Vernaza ([@dsapandora](https://github.com/dsapandora)) — [ariel@lazyracoon.tech](mailto:ariel@lazyracoon.tech)
 
-## Mathematical model (verified sketch)
-
-Formal write-up and internal **equation check** live in [`docs/IEEE-conference-draft-intelligent-agents-mcp.md`](docs/IEEE-conference-draft-intelligent-agents-mcp.md). **LaTeX (IEEEtran) + PDF:** compile [`docs/ieee-paper/agent-mcp-rocketride.tex`](docs/ieee-paper/agent-mcp-rocketride.tex); step-by-step (Overleaf / MacTeX) and a verification table are in [`docs/ieee-paper/README.md`](docs/ieee-paper/README.md). *This machine has no `pdflatex` in CI; generate the PDF locally or on Overleaf.*
 
 **Round-trip latency** (one MCP tool call through the pipeline):
 
