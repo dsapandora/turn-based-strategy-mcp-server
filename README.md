@@ -3,42 +3,42 @@
 Unity tactical-battle sample that shows **Unity MCP** talking to a **RocketRide** pipeline via the bundled [`TBS-mcp.pipe`](Assets/StreamingAssets/pipelines/TBS-mcp.pipe) definition.
 
 <p align="center">
-  <a href="https://www.instagram.com/p/DV4ZEQujEKr/" title="Demo reel on Instagram"><img src="https://img.shields.io/badge/Instagram-Ver%20reel%20del%20demo-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Ver el demo en Instagram"></a>
+  <a href="https://www.instagram.com/p/DV4ZEQujEKr/" title="Demo reel on Instagram"><img src="https://img.shields.io/badge/Instagram-Watch%20demo%20reel-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Watch demo on Instagram"></a>
   &nbsp;
   <a href="https://www.instagram.com/dsapandora/" title="Instagram @dsapandora"><img src="https://img.shields.io/badge/Instagram-%40dsapandora-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram @dsapandora"></a>
   &nbsp;
-  <a href="https://x.com/dsapandora" title="X (Twitter) @dsapandora"><img src="https://img.shields.io/badge/X-%40dsapandora-000000?style=for-the-badge&logo=x&logoColor=white" alt="X @dsapandora"></a>
+  <a href="https://x.com/dsapandora" title="X @dsapandora"><img src="https://img.shields.io/badge/X-%40dsapandora-000000?style=for-the-badge&logo=x&logoColor=white" alt="X @dsapandora"></a>
   &nbsp;
   <a href="https://github.com/dsapandora" title="GitHub @dsapandora"><img src="https://img.shields.io/badge/GitHub-dsapandora-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub @dsapandora"></a>
 </p>
 
 <p align="center">
-  <a href="https://www.instagram.com/p/DV4ZEQujEKr/" title="Ver y reproducir el reel en Instagram">
-    <img src="docs/social-demo-banner.png" alt="Banner del demo — abre Instagram para ver el vídeo" width="48%">
+  <a href="https://www.instagram.com/p/DV4ZEQujEKr/" title="Watch the demo reel on Instagram">
+    <img src="docs/social-demo-banner.png" alt="Demo banner — opens Instagram to watch the video" width="48%">
   </a>
   &nbsp;
-  <a href="https://www.instagram.com/p/DV4ZEQujEKr/" title="Ver y reproducir el reel en Instagram">
-    <img src="docs/demo-unity-mcp-rockeride-preview.jpg" alt="Fotograma del demo — abre Instagram para ver el vídeo" width="48%">
+  <a href="https://www.instagram.com/p/DV4ZEQujEKr/" title="Watch the demo reel on Instagram">
+    <img src="docs/demo-unity-mcp-rockeride-preview.jpg" alt="Demo frame — opens Instagram to watch the video" width="48%">
   </a>
 </p>
 
 <p align="center">
-  <strong>Demo en vídeo:</strong> <strong>ambas imágenes</strong> llevan al <a href="https://www.instagram.com/p/DV4ZEQujEKr/">mismo reel en Instagram</a> (Unity MCP, RocketRide y Claude), donde el vídeo <strong>sí se reproduce</strong>. En GitHub no se puede incrustar el reproductor de Instagram ni fiarse del MP4 en la vista del archivo.<br>
-  Sígueme en <a href="https://www.instagram.com/dsapandora/">Instagram @dsapandora</a> y en <a href="https://x.com/dsapandora">X @dsapandora</a>. Copia del grab en el repo: <a href="https://github.com/dsapandora/turn-based-strategy-mcp-server/blob/main/docs/demo-unity-mcp-rockeride.mp4"><code>docs/demo-unity-mcp-rockeride.mp4</code></a> (descarga / archivo; no como sustituto del reel).
+  <strong>Demo video:</strong> <strong>both images</strong> link to the <a href="https://www.instagram.com/p/DV4ZEQujEKr/">same Instagram reel</a> (Unity MCP, RocketRide, and Claude), where the video <strong>plays in the app or on instagram.com</strong>. GitHub cannot embed Instagram or reliably play video in the README.
 </p>
 
 **Author:** Ariel Vernaza ([@dsapandora](https://github.com/dsapandora)) — [ariel@lazyracoon.tech](mailto:ariel@lazyracoon.tech)
 
+In this **prototype** the LLM (e.g. Claude) is called over a **remote API**: perceived latency is not only “inference time” but also **network, TLS, provider queuing, and token streaming**. With a **local** model (e.g. Ollama on loopback), the network segment shrinks almost to zero and the **machine GPU** usually becomes the bottleneck.
 
-**Round-trip latency** (one MCP tool call through the pipeline):
+A **round-trip** decomposition for one tool invocation (MCP + pipeline + LLM) is:
 
 $$
 T_{\mathrm{RTT}} = T_{\mathrm{req}} + T_{\mathrm{srv}} + T_{\mathrm{LLM}} + T_{\mathrm{MCP}} + T_{\mathrm{resp}}.
 $$
 
-**Remote LLM (prototype, e.g. Claude API):** \(T_{\mathrm{req}}, T_{\mathrm{resp}}\) include **WAN + TLS**; \(T_{\mathrm{LLM}}\) includes **queue + cloud decode + streaming back**. That makes latency **transmission-heavy**. **Local LLM (e.g. Ollama on loopback):** the same decomposition holds but the network slice shrinks to near-loopback delays and the bottleneck usually moves to the **local GPU** (\(\rho_{\mathrm{GPU}}\)).
+Here $T_{\mathrm{req}}$ and $T_{\mathrm{resp}}$ are HTTP request/response (remote paths include **WAN**); $T_{\mathrm{srv}}$ is pipeline orchestration; $T_{\mathrm{LLM}}$ bundles provider queue + cloud generation + streamed tokens back; $T_{\mathrm{MCP}}$ is MCP framing plus Unity.
 
-WAN vs. local **network slice** and **RTT split** (first-order):
+Splitting what is attributable to **the wide-area path** versus a **local** deployment:
 
 $$
 T_{\mathrm{net}}^{\mathrm{WAN}} := T_{\mathrm{req}} + T_{\mathrm{resp}} + T_{\mathrm{TLS}} + T_{\mathrm{edge}}, \qquad
@@ -50,36 +50,12 @@ T_{\mathrm{RTT}}^{\mathrm{remote}} = T_{\mathrm{net}}^{\mathrm{WAN}} + T_{\mathr
 T_{\mathrm{RTT}}^{\mathrm{local}} = T_{\mathrm{net}}^{\mathrm{local}} + T_{\mathrm{srv}} + T_{\mathrm{LLM}}^{\mathrm{local}} + T_{\mathrm{MCP}}.
 $$
 
-**Expected latency drop** when colocating the model (same token workload, comparable silicon):
+The approximate **latency gain** when colocating the model with the game (same token load, comparable hardware) is
 
 $$
 \Delta = T_{\mathrm{RTT}}^{\mathrm{remote}} - T_{\mathrm{RTT}}^{\mathrm{local}}
 \approx \bigl(T_{\mathrm{net}}^{\mathrm{WAN}} - T_{\mathrm{net}}^{\mathrm{local}}\bigr)
 + \bigl(T_{\mathrm{LLM}}^{\mathrm{cloud}} - T_{\mathrm{LLM}}^{\mathrm{local}}\bigr).
-$$
-
-**Token throughput** bottleneck (tokens/s), network vs. decoder:
-
-$$
-\eta_{\mathrm{tok}} \leq \min\left( \frac{B_{\mathrm{net}}}{H_{\mathrm{tok}}},\ \rho_{\mathrm{GPU}} \right).
-$$
-
-**Cosine retrieval** (if \(\|\mathbf{e}\|_2=\|\mathbf{c}_i\|_2=1\), this reduces to the inner product):
-
-$$
-s_i = \frac{\mathbf{e}^{\top}\mathbf{c}_i}{\|\mathbf{e}\|_2\,\|\mathbf{c}_i\|_2}.
-$$
-
-**Tool choice** = pushforward of the token distribution under the parser \(\sigma^{-1}\); Boltzmann form is only a *descriptive* surrogate:
-
-$$
-\pi_\phi(\tau_t \mid o_t) = \sum_{y \in \mathcal{Y}_{\mathrm{valid}}:\,\sigma^{-1}(y)=\tau_t} P_\phi(y \mid o_t).
-$$
-
-**Unity transition** (simulator as deterministic black box):
-
-$$
-s_{t+1} = F_{\mathrm{Unity}}\bigl(s_t, \Psi(\tau_t)\bigr).
 $$
 
 ## End-to-end workflow
